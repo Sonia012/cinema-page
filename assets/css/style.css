@@ -1,0 +1,84 @@
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white; }
+
+h1 {
+  text-align: center;
+  font-style: italic;
+  border: 5px solid white;
+  padding: 10px; }
+
+p {
+  text-align: justify;
+  line-height: 1.5em; }
+
+ul {
+  list-style-type: none; }
+
+.poster {
+  text-align: center; }
+  .poster h3 {
+    text-decoration: underline;
+    color: white; }
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: #81DAF5; }
+  .navigation li {
+    padding: 9px; }
+    .navigation li a {
+      color: black; }
+
+.movies a {
+  color: white;
+  text-decoration: none;
+  line-height: 1.6em; }
+  @media only screen and (min-width: 900px) {
+    .movies a:hover {
+      text-decoration: underline; } }
+
+@media only screen and (min-width: 768px) {
+  .primary-screen {
+    display: grid;
+    grid-gap: 3%; }
+
+  .aquaman {
+    grid-area: pa; }
+
+  .bohemian {
+    grid-area: pb; }
+
+  .collegas {
+    grid-area: pc; }
+
+  .girl {
+    grid-area: pg; }
+
+  .sidebar {
+    grid-area: sb;
+    justify-self: center; } }
+@media only screen and (min-width: 768px) and (max-width: 899px) {
+  .primary-screen {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "pa pb" "pc pg" "sb sb"; } }
+@media only screen and (min-width: 900px) {
+  .navigation {
+    justify-content: flex-start; }
+
+  .primary-screen {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "pa pb pc sb" ".  pg  .  ."; }
+
+  .sidebar {
+    background-color: #81DAF5;
+    color: black;
+    text-align: center;
+    align-self: center; } }
+
+/*# sourceMappingURL=style.css.map */
